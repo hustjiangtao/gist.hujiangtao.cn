@@ -1,0 +1,20 @@
+/*色卡色系 - 海边的石头*/
+.is-color1 {
+    background-color: #efecca;
+}
+.is-color2 {
+    background-color: #e6e2af;
+}
+.is-color3 {
+    background-color: #002f2f;
+}
+.is-color4 {
+    background-color: #a7a37e;
+}
+.is-color5 {
+    background-color: #046380;
+}
+/*色卡色系 - 海边的石头*/
+.has-bottom-line {
+    padding-bottom:0.2rem;margin-bottom:1rem;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAABCAYAAACsXeyTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAFUlEQVQIHWNIS0sr/v//PwMMDzY+ADqMahlW4J91AAAAAElFTkSuQmCC') bottom left repeat-x;
+}

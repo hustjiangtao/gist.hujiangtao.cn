@@ -1,0 +1,19 @@
+#!/bin/sh
+USER=my-user
+HOST=tengxun
+DIR=/var/www/web/gist.hujiangtao.cn/   # the directory where your web site files should go
+
+# generate html with minify
+hugo --ignoreCache --minify
+
+# 发布到upyun cloud storage
+find . -name '*.DS_Store' | xargs rm
+echo "---清理DS_Store完毕---"
+~/x-tools/upx switch f-gist-hujiangtao-cn
+~/x-tools/upx sync public / --delete
+echo "---同步完毕---"
+
+# deploy to tengxun
+# hugo --ignoreCache --minify && rsync -avz --delete public/ ${HOST}:${DIR}
+
+exit 0

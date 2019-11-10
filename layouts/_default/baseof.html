@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="theme-color" content="#fafafa">
+  {{ partial "head.html" . }}
 </head>
 
 <body>
@@ -18,17 +15,13 @@
   <!-- Add your site or application content here -->
   <!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
   <!-- Code that all your templates share, like a header -->
-  {{ block "header" . }}
   <!-- More shared code, perhaps a header but that can be overridden if need be in  -->
-  {{ end }}
-  <main style="margin: 0 15%;padding: 3% 5%">
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-  </main>
-  {{ block "footer" . }}
-  <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-  {{ end }}
+  <section class="hero is-fullheight">
+    <div class="hero-head">{{ partial "header.html" . }}</div>
+    <div class="hero-body">{{ block "main" . }}{{ end }}</div>
+    <div class="hero-foot">{{ partial "footer.html" . }}</div>
+  </section>
+  {{ partial "script.html" . }}
 </body>
 
 </html>

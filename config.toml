@@ -1,8 +1,10 @@
 baseURL = "https://gist.hujiangtao.cn/"
+#baseURL = "http://127.0.0.1:8000/"
+#baseURL = "https://static.hujiangtao.cn/gist/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Gist"
 
 #url end with .html
-uglyurls = true
+#uglyurls = true
 #robots.txt
 enableRobotsTXT = true

@@ -1,18 +1,18 @@
 {{ define "main" }}
-  <div>
-    {{ .Content }}
-  </div>
+  <div class="container columns is-centered">
+    <div class="content column is-three-quarters">
+      {{ .Content }}
 
-  <div>
-    {{ range .Paginator.Pages }}
-      <article>
-	    <h2><a href="{{.Permalink}}">{{ .Title }}</a></h2>
-	    <p>
-	      {{.Date.Format "2006-01-02"}}
-	    </p>
-	    {{ .Description }}
-        <!-- {{ .Summary }} -->
-      </article>
-    {{ end }}
+      {{ range .Paginator.Pages }}
+        <div class="box">
+          <div class="subtitle has-bottom-line">
+            <a href="{{.Permalink}}">{{ .Title }}</a>
+            <span class="tag is-pulled-right">{{.Date.Format "2006-01-02"}}</span>
+          </div>
+          <p>{{ .Description }}</p>
+          <!--{{ .Summary }}-->
+        </div>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
