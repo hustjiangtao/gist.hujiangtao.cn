@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  {{ partial "head.html" . }}
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
+  <!-- Code that all your templates share, like a header -->
+  <!-- More shared code, perhaps a header but that can be overridden if need be in  -->
+  <section class="hero is-fullheight">
+    <div class="hero-head">{{ partial "header.html" . }}</div>
+    <div class="hero-body">
+      <div class="container columns is-centered">
+        <div class="content column is-three-quarters">
+          <div id="search-results">
+            <h3>Matching pages</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-foot">{{ partial "footer.html" . }}</div>
+  </section>
+  {{ partial "script.html" . }}
+</body>
+
+</html>
+
+<!--<section style="margin: 0 15%;padding: 3% 5%">-->
+<!--  <div>-->
+<!--    <form action='{{ "search.html" | absURL }}'>-->
+<!--      <input id="search-query" name="s"/>-->
+<!--    </form>-->
+<!--    <div id="search-results">-->
+<!--     <h3>Matching pages</h3>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<script id="search-result-template" type="text/x-js-template">
+  <div id="summary-${key}" class="box">
+    <h4 class="has-bottom-line"><a href="${link}">${title}</a></h4>
+    <p>${snippet}</p>
+    ${ isset tags }<p>Tags: ${tags}</p>${ end }
+    ${ isset categories }<p>Categories: ${categories}</p>${ end }
+  </div>
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src='{{ "js/search.js" | absURL }}'></script>

@@ -8,3 +8,7 @@ title = "Gist"
 #uglyurls = true
 #robots.txt
 enableRobotsTXT = true
+
+#generate search json for local search
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
