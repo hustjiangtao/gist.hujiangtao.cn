@@ -1,0 +1,25 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<ul class="pagination flex-centered">
+  {{ if .Paginator.HasPrev }}
+  <li class="page-item"><a href="{{ .Paginator.Prev.URL }}" tabindex="-1">Prev</a></li>
+  {{ else }}
+  <li class="page-item disabled"><a href="#" tabindex="-1">Prev</a></li>
+  {{ end }}
+
+  {{ $current:=.Paginator.URL }}
+  {{ range .Paginator.Pagers }}
+  {{ if eq $current .URL }}
+  <li class="page-item active"><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+  {{ else }}
+  <li class="page-item"><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+  {{ end }}
+  {{ end }}
+
+  {{ if .Paginator.HasNext }}
+  <li class="page-item"><a href="{{ .Paginator.Next.URL }}">Next</a></li>
+  {{ else }}
+  <li class="page-item disabled"><a href="#">Next</a></li>
+  {{ end }}
+</ul>
+{{ end }}
+

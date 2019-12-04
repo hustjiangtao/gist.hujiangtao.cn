@@ -1,8 +1,9 @@
 {{ define "main" }}
-<div class="container columns is-centered">
-  <div class="content column is-three-quarters">
-<!--     <h1>{{ .Title }}</h1>-->
+<div class="container col-7 col-lg-11 lang-zh-hans">
+  {{ partial "toc.html" . }}
+  <div class="post-content">
     {{ .Content }}
   </div>
 </div>
+{{ partial "to_top.html" . }}
 {{ end }}

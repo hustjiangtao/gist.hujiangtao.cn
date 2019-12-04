@@ -1,3 +1,34 @@
+/*layout*/
+html, body {
+    height: 100%;
+}
+.main-body {
+    height: 100%;
+    flex-direction: column;
+}
+.header {
+    flex: 0 0 auto;
+    border-bottom: 1px solid #ddd;
+}
+.main {
+    flex: 1 1 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+/*layout*/
+
+/*component*/
+.toc {
+    font-size: small;
+    background-color: #f7fafc;
+    float: left;
+    position: fixed;
+    left: 0;
+    line-height: 1;
+}
+/*component*/
+
 /*色卡色系 - 海边的石头*/
 .is-color1 {
     background-color: #efecca;

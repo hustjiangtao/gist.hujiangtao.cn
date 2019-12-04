@@ -9,6 +9,17 @@ title = "Gist"
 #robots.txt
 enableRobotsTXT = true
 
+#Paginate = 10
+
 #generate search json for local search
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# new markdown render for hugo from v0.60.0
+# see more: https://github.com/gohugoio/hugo/releases/tag/v0.60.0
+[markup]
+  [markup.highlight]
+    codeFences = false
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 2

@@ -1,57 +1,16 @@
-<header class="navbar is-transparent has-shadow">
-
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src='{{ "images/icons/icon-360x144.png" | absURL }}' alt="Gist icon">
-    </a>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/">Home</a>
-      <a class="navbar-item" href="/posts/">Posts</a>
-      <a class="navbar-item" href="/about/">About</a>
-    </div>
-  </div>
-
-  <div class="field">
+<header class="navbar p-2">
+  <section class="col-2 hide-lg"></section>
+  <section class="navbar-section">
+    <a href="/" class="navbar-brand mr-2">Gist</a>
+    <a href="/posts/" class="btn btn-link">Posts</a>
+    <a href="/about/" class="btn btn-link">About</a>
+  </section>
+  <section class="navbar-section">
     <form action='{{ "search/" | absURL }}'>
-      <input class="input" type="text" placeholder="搜索一下" id="search-query" name="s">
+      <div class="input-group input-inline">
+        <input class="form-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-label="search input" name="s">
+        <button class="btn btn-primary input-group-btn" type="submit">Search</button>
+      </div>
     </form>
-  </div>
-
+  </section>
 </header>
-
-<!--navbar menu toggle on mobile-->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
-});
-</script>

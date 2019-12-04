@@ -16,11 +16,11 @@
   <!-- <p>Hello world! This is HTML5 Boilerplate.</p> -->
   <!-- Code that all your templates share, like a header -->
   <!-- More shared code, perhaps a header but that can be overridden if need be in  -->
-  <section class="hero is-fullheight">
-    <div class="hero-head">{{ partial "header.html" . }}</div>
-    <div class="hero-body">{{ block "main" . }}{{ end }}</div>
-    <div class="hero-foot">{{ partial "footer.html" . }}</div>
-  </section>
+  <div class="main-body d-flex">
+    <section class="header">{{ partial "header.html" . }}</section>
+    <section class="main columns">{{ block "main" . }}{{ end }}</section>
+    <section class="footer">{{ partial "footer.html" . }}</section>
+  </div>
   {{ partial "script.html" . }}
 </body>
 
