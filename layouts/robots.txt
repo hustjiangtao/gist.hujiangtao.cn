@@ -1,0 +1,28 @@
+User-agent: *
+Request-rate: 1/1
+Crawl-delay: 5
+disallow: /
+
+User-agent: googlebot
+Request-rate: 1/1
+Crawl-delay: 5
+allow: /posts/
+disallow: /
+
+User-agent: msnbot
+Request-rate: 1/1
+Crawl-delay: 5
+allow: /posts/
+disallow: /
+
+User-agent: baiduspider
+Request-rate: 1/1
+Crawl-delay: 5
+allow: /posts/
+disallow: /
+
+User-agent: sogou spider
+Request-rate: 1/1
+Crawl-delay: 5
+allow: /posts/
+disallow: /

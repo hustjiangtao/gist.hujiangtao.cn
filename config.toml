@@ -25,3 +25,8 @@ enableRobotsTXT = true
   [markup.tableOfContents]
     endLevel = 3
     startLevel = 2
+
+[sitemap]  # 必需
+  changefreq = "daily"
+  priority = 0.5
+  filename = "sitemap.xml"
